@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Castoro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About-ME</title>
+</head>
+<style>
+    body::before {
+        content: "";
+        z-index: -1;
+        opacity: 0.9;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url('/assets/img/4010449.jpg') no-repeat center center/cover;
+        opacity: 0.9;
+        top: 0;
+    }
+    
+    body {
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
+    
+    .set-width {
+        position: absolute;
+        width: 90%;
+        height: 85%;
+        top: 50px;
+        left: 65px;
+        background: url('/img/4010449.jpg') no-repeat center center/cover;
+        box-sizing: border-box;
+        box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.712);
+        border: 1px solid rgb(190, 185, 255);
+    }
+    
+    .container {
+        margin-top: 0px;
+        padding: 0px;
+        width: 85%;
+        margin: auto;
+    }
+    
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: auto;
+        /* animaito... */
+        animation: navbar;
+        animation-duration: 0.6s;
+        animation-delay: 1s;
+        animation-iteration-count: 1;
+    }
+    
+    @keyframes navbar {
+        0% {
+            width: 10%;
+            color: white;
+            border-radius: 100px;
+            background-color: rgb(104, 139, 255);
+        }
+        30% {
+            width: 30%;
+            /* height: 30%; */
+            color: white;
+            border-radius: 400px;
+            background-color: rgb(104, 139, 255);
+        }
+        50% {
+            width: 60%;
+            /* height: 60%; */
+            color: white;
+            background-color: rgb(104, 139, 255);
+        }
+        75% {
+            width: 80%;
+            /* height: 80%; */
+            color: white;
+            background-color: rgb(104, 139, 255);
+        }
+        100% {
+            width: 100%;
+            /* height: 100%; */
+        }
+    }
+    
+    .img-logo img {
+        border: 3px solid rgba(255, 255, 255, 0.37);
+        box-shadow: 1px 1px 50px rgba(7, 0, 0, 0.335);
+        margin-top: 5px;
+        border-radius: 30px;
+        transition: all ease-in-out 0.3s;
+    }
+    
+    .img-logo img:hover {
+        border-radius: 40px;
+        transition: all ease-in-out 0.3s;
+    }
+    
+    .unlist {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+    }
+    
+    .unlist li {
+        list-style: none;
+        margin-right: 30px;
+        margin-top: 30px;
+        text-shadow: 3px 5px 12px rgb(112, 174, 255);
+    }
+    
+    .unlist li a {
+        text-decoration: none;
+        text-shadow: 3px 5px 12px rgba(1, 36, 83, 0.445);
+        color: rgb(0, 26, 255);
+        font-weight: bold;
+        font-family: 'Ubuntu', sans-serif;
+        padding: 5px 20px;
+        transition: all ease-in-out 0.4s;
+    }
+    
+    .unlist li a:hover {
+        box-shadow: 2px 1px 10px rgba(0, 76, 255, 0.596);
+        border-radius: 20px;
+        color: rgb(255, 255, 255);
+        transition: all ease-in-out 0.4s;
+        background-color: rgba(0, 47, 255, 0.856);
+        cursor: pointer;
+    }
+    /* content area starts  */
+    
+    .content-box {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        font-size: 1.5rem;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .display-content {
+        text-align: center;
+        /* border-left: 2px solid rgba(1, 48, 53, 0.52); */
+        margin: 0;
+        box-shadow: 0px 0px 7px rgba(172, 172, 172, 0.322);
+    }
+    
+    .content-prof {
+        padding: 0 20px;
+        margin: 10px;
+        font-size: 2.2rem;
+    }
+    
+    .content-prof p span {
+        color: rgba(82, 70, 251, 0.876);
+        text-shadow: 3px 5px 12px rgba(0, 110, 255, 0.465);
+        padding: 10px;
+        animation: prof;
+        animation-duration: 3s;
+        animation-delay: 3.5s;
+        animation-iteration-count: 1;
+        font-family: 'Overpass', sans-serif;
+    }
+    
+    @keyframes prof {
+        0% {
+            color: rgba(255, 0, 0, 0);
+        }
+        30% {
+            color: rgba(72, 135, 252, 0.383);
+        }
+        60% {
+            color: rgba(99, 57, 253, 0.815);
+        }
+        100% {
+            color: rgb(7, 2, 255);
+        }
+    }
+    
+    .content {
+        padding: 0 10px;
+    }
+    
+    .content h1 {
+        text-shadow: 2px 2px 10px rgb(0, 110, 253);
+        color: rgba(15, 15, 15, 0.637);
+        font-family: 'Overpass', sans-serif;
+    }
+    
+    .content h1 span {
+        color: rgb(25, 0, 255);
+        text-shadow: 2px 2px 10px rgba(86, 126, 255, 0.376);
+        font-weight: 800;
+        font-family: 'Lobster', cursive;
+        padding: 10px;
+        animation: animate 1s 3s linear 1;
+    }
+    
+    @keyframes animate {
+        0% {
+            color: rgba(255, 160, 122, 0);
+            border: 1px solid rgba(197, 246, 255, 0.171);
+        }
+        25% {
+            color: rgba(0, 183, 255, 0.322);
+            border: 1px solid rgba(86, 244, 255, 0.876);
+            border-radius: 20px;
+            box-shadow: 2px 2px 12px rgb(16, 99, 255);
+        }
+        50% {
+            color: rgb(4, 0, 255);
+            border: 1px solid rgba(86, 128, 255, 0.445);
+        }
+        100% {
+            color: rgba(0, 17, 255, 0.712);
+            border: 1px solid rgba(86, 255, 241, 0);
+        }
+    }
+    
+    .btn {
+        padding: 0 20px;
+        margin-top: 50px;
+    }
+    
+    .btn a {
+        text-decoration: none;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.815);
+        background-color: rgba(0, 110, 255, 0.787);
+        padding: 5px 10px;
+        border-radius: 20px;
+        border: 3px solid rgba(255, 255, 255, 0.287);
+        transition: all ease-in-out 0.5s;
+        font-family: 'Overpass', sans-serif;
+        animation: button;
+        animation-duration: 2s;
+        animation-delay: 3s;
+        animation-iteration-count: 1;
+    }
+    
+    @keyframes button {
+        0% {
+            color: rgba(255, 255, 255, 0);
+            background-color: rgba(0, 255, 255, 0);
+        }
+        25% {
+            color: rgba(255, 255, 255, 0.356);
+            background-color: rgba(0, 81, 255, 0.144);
+        }
+        60% {
+            color: rgba(0, 0, 0, 0.698);
+            background-color: rgba(0, 47, 255, 0.342);
+        }
+        100% {
+            color: rgba(19, 7, 7, 0.698);
+            background-color: rgba(0, 89, 255, 0.452);
+        }
+    }
+    
+    .btn a:hover {
+        background-color: rgba(0, 60, 255, 0.739);
+        box-shadow: 2px 2px 20px rgb(96, 152, 243);
+        transition: all ease-in-out 0.5s;
+        color: white;
+        border: 3px solid rgba(255, 255, 255, 0.794);
+        text-shadow: 2px 2px 12px black;
+    }
+    
+    .paragraph {
+        padding: 0 20px;
+        width: 100%;
+        font-family: 'Ubuntu', sans-serif;
+        margin-top: 50px;
+    }
+    
+    .paragraph ul li p {
+        color: rgba(0, 0, 0, 0.466);
+        text-shadow: 2px 2px 10px rgb(0, 110, 253);
+        font-size: 23px;
+        margin: 0;
+        animation: para;
+        animation-duration: 3s;
+        animation-delay: 3s;
+        animation-iteration-count: 1;
+    }
+    
+    @keyframes para {
+        0% {
+            color: rgba(255, 255, 255, 0.007);
+        }
+        25% {
+            color: rgba(255, 255, 255, 0);
+        }
+        60% {
+            color: rgba(0, 0, 0, 0.328)
+        }
+        75% {
+            color: rgba(0, 0, 0, 0.609);
+        }
+        100% {
+            color: rgba(0, 0, 0, 0.808);
+        }
+    }
+    
+    .paragraph ul li {
+        color: rgba(0, 0, 0, 0.842);
+        list-style: none;
+        margin: 2px;
+        padding: 0;
+        font-size: 23px;
+    }
+    
+    .foot {
+        width: 100%;
+    }
+    
+    .foot-box {
+        display: flex;
+        justify-content: space-between;
+        width: 85vw;
+        margin: auto;
+    }
+    
+    .logo-img li {
+        padding: 0;
+        list-style: none;
+        margin: 10px;
+    }
+    
+    .logo-img {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .foot-left p {
+        color: rgb(0, 0, 0);
+        text-shadow: 2px 2px 10px rgba(32, 32, 32, 0.096);
+        margin: 3px;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    
+    .foot-right ul {
+        margin-top: 0px;
+    }
+    
+    .foot-right ul li {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        transition: all ease-in-out 0.4s;
+        padding: 3px;
+        text-shadow: 2px 2px 10px rgb(0, 110, 253);
+    }
+    
+    .foot-right ul li a {
+        border-radius: 10px;
+        background-color: rgba(0, 119, 255, 0.26);
+    }
+    
+    .foot-right ul li a img:hover {
+        background-color: rgb(192, 217, 255);
+        line-height: 1px;
+        box-shadow: 4px 4px 12px rgba(42, 99, 255, 0.705);
+        position: relative;
+        transition: all ease-in-out 0.4s;
+        border-radius: 10px;
+        text-shadow: 2px 2px 10px rgb(0, 110, 253);
+    }
+    /* about me area strats here.... */
+    
+    .about-me {
+        height: 80vh;
+        width: 90vw;
+        background-color: red;
+        margin: auto;
+        background-color: rgba(128, 194, 255, 0.322);
+    }
+    
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .about-starts h1 {
+        background-color: rgb(0, 140, 255);
+        color: white;
+        text-shadow: 2px 2px 12px black;
+        padding: 10px;
+    }
+    
+    .about-starts p {
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.089);
+    }
+    /* contact page strats  here ... */
+    
+    .form-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.239);
+        height: 80vh;
+        width: 80vw;
+        margin: auto;
+    }
+    
+    .form-content h1 {
+        font-family: 'Ubuntu', sans-serif;
+        color: rgb(0, 34, 112);
+    }
+    
+    form {
+        width: 700px;
+    }
+    
+    .form-g {
+        font-family: 'Overpass', sans-serif;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    form label {
+        text-shadow: 2px 2px 12px rgba(2, 0, 116, 0.438);
+        color: rgba(0, 31, 116, 0.829);
+    }
+    
+    form input,
+    form textarea {
+        padding: 10px;
+        border: none;
+        outline: none;
+        background-color: rgba(255, 255, 255, 0.644);
+        border-radius: 10px;
+        transition: all ease-in-out 0.3s;
+    }
+    
+    form input:hover,
+    form textarea:hover {
+        background-color: white;
+        transition: all ease-in-out 0.3s;
+    }
+    
+    form textarea {
+        height: 50px;
+    }
+    
+    form .f-btn {
+        outline: none;
+        align-items: center;
+        align-self: center;
+        margin-top: 20px;
+        line-height: 30px;
+        width: 70px;
+        background-color: rgb(29, 63, 255);
+        color: white;
+        transition: all ease-in-out 0.3s;
+        border: 1px solid white;
+        border-radius: 10px;
+    }
+    
+    form .f-btn:hover {
+        outline: none;
+        font-family: 'Ubuntu', sans-serif;
+        text-shadow: 2px 2px 12px white;
+        background-color: rgba(29, 63, 255, 0.904);
+        transition: all ease-in-out 0.3s;
+        box-shadow: 2px 2px 12px white;
+    }
+    /* my skills page starts here */
+    
+    .my-skills {
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+        height: 80vh;
+    }
+    
+    .skills {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 90vw;
+        height: 80vh;
+        margin: auto;
+        background-color: rgba(255, 255, 255, 0.178);
+    }
+    
+    .skill {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .skill h3 {
+        width: 50%;
+        color: white;
+        padding-bottom: 0%;
+        border-radius: 30px;
+        text-shadow: 2px 2px 12px black;
+    }
+    
+    .skill h3 p {
+        border-radius: 10px;
+        text-align: center;
+        line-height: 30px;
+        margin: 0px;
+    }
+    
+    .width-skill1 p {
+        width: 70%;
+        animation-name: html;
+        animation-duration: 0.7s;
+        animation-iteration-count: 1;
+        animation-delay: 1.5s;
+        background-color: rgba(74, 74, 255, 0.596);
+        text-shadow: 2px 2px 12px black;
+    }
+    
+    .width-skill2 p {
+        box-shadow: 2px 2px 12px rgba(255, 0, 242, 0.424);
+        width: 65%;
+        animation-name: html;
+        animation-duration: 0.6s;
+        animation-iteration-count: 1;
+        animation-delay: 2.2s;
+        background-color: rgba(243, 99, 248, 0.76);
+    }
+    
+    .width-skill3 p {
+        width: 40%;
+        box-shadow: 2px 2px 12px rgba(255, 0, 0, 0.459);
+        animation-name: html;
+        animation-duration: 0.5s;
+        animation-iteration-count: 1;
+        animation-delay: 3s;
+        background-color: rgba(248, 99, 99, 0.76);
+    }
+    
+    .width-skill4 p {
+        width: 30%;
+        box-shadow: 2px 2px 12px rgba(81, 255, 0, 0.479);
+        animation-name: html;
+        animation-duration: 0.4s;
+        animation-iteration-count: 1;
+        animation-delay: 3.7s;
+        background-color: rgba(125, 255, 92, 0.76);
+    }
+    
+    @keyframes html {
+        0% {
+            width: 0%;
+            color: rgba(0, 0, 0, 0);
+        }
+        1% {
+            width: 1%;
+            color: rgba(255, 255, 255, 0.151);
+        }
+        3% {
+            width: 2%;
+            color: rgba(255, 255, 255, 0.397);
+        }
+        4% {
+            width: 3%;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        5% {
+            width: 4%;
+            color: rgba(255, 255, 255, 0.65);
+        }
+        6% {
+            width: 5%;
+            color: rgba(255, 255, 255, 0.747);
+        }
+        7% {
+            width: 6%;
+            color: rgba(255, 255, 255, 0.76);
+        }
+        8% {
+            width: 7%;
+            color: rgb(251, 251, 251);
+        }
+        9% {
+            width: 9%;
+            color: rgb(251, 251, 251);
+        }
+        10% {
+            width: 10%;
+            color: rgb(251, 251, 251);
+        }
+        11% {
+            width: 11%;
+            color: rgb(251, 251, 251);
+        }
+        12% {
+            width: 12%;
+            color: rgb(251, 251, 251);
+        }
+        13% {
+            width: 13%;
+            color: rgb(251, 251, 251);
+        }
+        14% {
+            width: 14%;
+            color: rgb(251, 251, 251);
+        }
+        15% {
+            width: 15%;
+            color: rgb(251, 251, 251);
+        }
+        16% {
+            width: 16%;
+            color: rgb(251, 251, 251);
+        }
+        17% {
+            width: 17%;
+            color: rgb(251, 251, 251);
+        }
+        18% {
+            width: 18%;
+            color: rgb(251, 251, 251);
+        }
+        19% {
+            width: 19%;
+            color: rgb(251, 251, 251);
+        }
+        20% {
+            width: 20%;
+            color: rgb(251, 251, 251);
+        }
+        21% {
+            width: 21%;
+            color: rgb(251, 251, 251);
+        }
+        22% {
+            width: 22%;
+            color: rgb(251, 251, 251);
+        }
+        23% {
+            width: 23%;
+            color: rgb(251, 251, 251);
+        }
+        24% {
+            width: 24%;
+            color: rgb(251, 251, 251);
+        }
+        25% {
+            width: 25%;
+            color: rgb(251, 251, 251);
+        }
+        26% {
+            width: 26%;
+            color: rgb(251, 251, 251);
+        }
+        27% {
+            width: 27%;
+            color: rgb(251, 251, 251);
+        }
+        28% {
+            width: 28%;
+            color: rgb(251, 251, 251);
+        }
+        29% {
+            width: 29%;
+            color: rgb(251, 251, 251);
+        }
+        30% {
+            width: 30%;
+            color: rgb(251, 251, 251);
+        }
+        31% {
+            width: 31%;
+            color: rgb(251, 251, 251);
+        }
+        32% {
+            width: 32%;
+            color: rgb(251, 251, 251);
+        }
+        33% {
+            width: 33%;
+            color: rgb(251, 251, 251);
+        }
+        34% {
+            width: 34%;
+            color: rgb(251, 251, 251);
+        }
+        35% {
+            width: 35%;
+            color: rgb(251, 251, 251);
+        }
+        36% {
+            width: 36%;
+            color: rgb(251, 251, 251);
+        }
+        37% {
+            width: 37%;
+            color: rgb(251, 251, 251);
+        }
+        38% {
+            width: 38%;
+            color: rgb(251, 251, 251);
+        }
+        39% {
+            width: 39%;
+            color: rgb(251, 251, 251);
+        }
+        40% {
+            width: 40%;
+            color: rgb(251, 251, 251);
+        }
+        41% {
+            width: 41%;
+            color: rgb(251, 251, 251);
+        }
+        42% {
+            width: 42%;
+            color: rgb(251, 251, 251);
+        }
+        43% {
+            width: 43%;
+            color: rgb(251, 251, 251);
+        }
+        44% {
+            width: 44%;
+            color: rgb(251, 251, 251);
+        }
+        45% {
+            width: 45%;
+            color: rgb(251, 251, 251);
+        }
+        46% {
+            width: 46%;
+            color: rgb(251, 251, 251);
+        }
+        47% {
+            width: 47%;
+            color: rgb(251, 251, 251);
+        }
+        48% {
+            width: 48%;
+            color: rgb(251, 251, 251);
+        }
+        49% {
+            width: 49%;
+            color: rgb(251, 251, 251);
+        }
+        50% {
+            width: 50%;
+            color: rgb(251, 251, 251);
+        }
+        51% {
+            width: 51%;
+            color: rgb(251, 251, 251);
+        }
+        52% {
+            width: 52%;
+            color: rgb(251, 251, 251);
+        }
+        53% {
+            width: 53%;
+            color: rgb(251, 251, 251);
+        }
+        54% {
+            width: 54%;
+            color: rgb(251, 251, 251);
+        }
+        55% {
+            width: 55%;
+            color: rgb(251, 251, 251);
+        }
+        56% {
+            width: 56%;
+            color: rgb(251, 251, 251);
+        }
+        57% {
+            width: 57%;
+            color: rgb(251, 251, 251);
+        }
+        58% {
+            width: 58%;
+            color: rgb(251, 251, 251);
+        }
+        59% {
+            width: 59%;
+            color: rgb(251, 251, 251);
+        }
+        60% {
+            width: 60%;
+            color: rgb(251, 251, 251);
+        }
+        61% {
+            width: 61%;
+            color: rgb(251, 251, 251);
+        }
+        62% {
+            width: 62%;
+            color: rgb(251, 251, 251);
+        }
+        63% {
+            width: 63%;
+            color: rgb(251, 251, 251);
+        }
+        64% {
+            width: 64%;
+            color: rgb(251, 251, 251);
+        }
+        65% {
+            width: 65%;
+            color: rgb(251, 251, 251);
+        }
+        66% {
+            width: 66%;
+            color: rgb(251, 251, 251);
+        }
+        67% {
+            width: 67%;
+            color: rgb(251, 251, 251);
+        }
+        68% {
+            width: 68%;
+            color: rgb(251, 251, 251);
+        }
+        69% {
+            width: 69%;
+            color: rgb(251, 251, 251);
+        }
+        70% {
+            width: 70%;
+            color: rgb(251, 251, 251);
+        }
+    }
+</style>
+
+<body>
+
+
+    <div class="container">
+        <nav class=" navbar ">
+
+            <ul class="unlist ">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/forms/AboutMe.html">About Me</a></li>
+                <li><a href="/forms/contact.html ">Contact Me</a></li>
+                <li><a href="/forms/mySkills.html">My Skills</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="about-me">
+        <div class="about-content">
+            <div class="about-starts">
+
+                <h1>My Self</h1>
+                <p>In compare to studies, I am good at sports. so I am the captain of my class football team . I am the best football player at my college. Besides this, I am a fast runner also and I love to Code. I am in expert swimming. The advice of my
+                    parents had a keen effect on my.And also
+                    <strong>FRONT END DEVELOPER</strong>
+                </p>
+                <p> I believe to speak the truth and try my best not to lie. My parents always advised me that if I commit a mistake, I should admit it. I try my best to do so. I know how to remain happy in every condition. Because I believe that: “Happiness
+                    is not out there; it’s in you.” I am a very adventurous person too and like to take the risk. I like to do a creative thing besides doing old stuff again and again. Learning new things is one thing which I always enjoy. I always update
+                    myself with the news
+                </p>
+            </div>
+            <div class="graduate">
+
+                <h3>web DEVELOPER in: <strong>Front End</strong> </h3>
+                <h1>
+                    <>
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer area starts here -->
+    <div class="foot">
+        <div class="foot-box">
+            <div class="foot-left">
+                <p>
+                    Trusted web DEVELOPER
+                </p>
+                <p>
+                    follow me on:
+                </p>
+            </div>
+            <div class="foot-right">
+                <ul class="logo-img">
+                    <li>
+                        <a href="https://www.facebook.com/profile.php?id=100009752892646"> <img src="/assets/img/facebook (1).svg" alt="" width="25px"></a>
+                    </li>
+                    <li>
+                        <a href="https://www.whatsapp.com/"> <img src="/assets/img/whatsapp.svg" alt="" width="25px"></a>
+                    </li>
+                    <li>
+                        <a href="#"> <img src="/assets/img/telegram.svg" alt="" width="25px"></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/"> <img src="/assets/img/instagram (1).svg" alt="" width="25px"></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/bashu-riyan"> <img src="/assets/img/github.svg" alt="" width="25px"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
